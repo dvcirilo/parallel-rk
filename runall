@@ -3,3 +3,6 @@
 make
 ./bin/rkseq
 gnuplot -p -e "plot \"data/rkseq.dat\""
+./bin/rkpar
+gnuplot -p -e "plot \"data/rkpar.dat\""
+
