@@ -22,17 +22,9 @@ void runge4(double x, double y[], double step){
   for (i=0; i<N; i++){
     k1[i] = h*F(x+0.5*h, y, i);
     g1[i] = y[i] + 0.5 * k1[i];
-  }
-  for (i=0; i<N; i++){
     g2[i] = y[i] + (0.33) * k1[i];
-  }
-  for (i=0; i<N; i++){
     g3[i] = g2[i] + (0.33)*h*F(x+0.5*h, g2, i);
-  }
-  for (i=0; i<N; i++){
     g4[i] = F(x+(0.33)*h, g2, i);
-  }
-  for (i=0; i<N; i++){
     y[i] += h*(-2*F(x+0.5*h,g1,i)+(1.5)*g4[i]+(1.5)*F(x+(0.66)*h,g3,i));
   }
 }
