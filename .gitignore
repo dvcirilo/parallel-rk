@@ -1,0 +1,5 @@
+*.swp
+bin/*
+data/*
+!bin/.keep
+!data/.keep
