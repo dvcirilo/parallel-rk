@@ -1,6 +1,7 @@
 #!/bin/bash
 
 make
+rm data/rkseq.dat data/rkpar.dat
 ./bin/rkseq
 gnuplot -p -e "plot \"data/rkseq.dat\""
 ./bin/rkpar
